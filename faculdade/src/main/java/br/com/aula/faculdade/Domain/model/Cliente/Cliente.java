@@ -28,14 +28,14 @@ public class Cliente {
     private String nome;
     private String email;
     private String documento;
+    private Set<String> telefones = new HashSet<>();
     @Enumerated(EnumType.STRING)
     private TipoDocumento tipoDocumento;
     
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pedido> pedidos = new ArrayList<>();
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Telefone> telefones = new HashSet<>();
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+   
     private List<Endereco> enderecos = new ArrayList<>();
     
     public List<Endereco> getEnderecos() {
@@ -46,14 +46,18 @@ public class Cliente {
         this.enderecos = enderecos;
     }
 
+    public void AddTelefone(String telefone){
+        telefones.add(telefone);
+    }
+
     public Cliente(Integer id, String nome, String email, String documento, TipoDocumento tipoDocumento,
-            Set<Telefone> telefones) {
+            String telefone) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.documento = documento;
         this.tipoDocumento = tipoDocumento;
-        this.telefones = telefones;
+        this.telefones.add(telefone);
     }
     
     public Cliente(){}
@@ -121,11 +125,11 @@ public class Cliente {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public Set<Telefone> getTelefones() {
+    public Set<String> getTelefones() {
         return telefones;
     }
 
-    public void setTelefones(Set<Telefone> telefones) {
+    public void setTelefones(Set<String> telefones) {
         this.telefones = telefones;
     }
 }
