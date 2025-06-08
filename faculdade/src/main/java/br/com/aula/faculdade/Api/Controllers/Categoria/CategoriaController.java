@@ -2,7 +2,6 @@ package br.com.aula.faculdade.Api.Controllers.Categoria;
 
 import java.util.List;
 
-import org.slf4j.helpers.Reporter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
