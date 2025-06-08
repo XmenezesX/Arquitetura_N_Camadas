@@ -1,4 +1,4 @@
-package br.com.aula.faculdade.Core.Domain.model.Enuns.TipoDocumento;
+package br.com.aula.faculdade.Core.Domain.Model.Enuns.TipoDocumento;
 
 public enum TipoDocumento {
     CPF(2, "Cpf"),

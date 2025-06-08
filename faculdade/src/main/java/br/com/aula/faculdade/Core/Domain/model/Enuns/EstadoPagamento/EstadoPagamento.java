@@ -1,4 +1,4 @@
-package br.com.aula.faculdade.Core.Domain.model.Enuns.EstadoPagamento;
+package br.com.aula.faculdade.Core.Domain.Model.Enuns.EstadoPagamento;
 
 public enum EstadoPagamento {
     NOVO(0, "Novo"),

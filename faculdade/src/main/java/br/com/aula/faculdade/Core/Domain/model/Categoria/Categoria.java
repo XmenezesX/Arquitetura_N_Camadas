@@ -1,9 +1,11 @@
-package br.com.aula.faculdade.Core.Domain.model.Categoria;
+package br.com.aula.faculdade.Core.Domain.Model.Categoria;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.aula.faculdade.Core.Domain.model.Produto.Produto;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import br.com.aula.faculdade.Core.Domain.Model.Produto.Produto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +22,7 @@ public class Categoria {
     private String nome;
 
     @ManyToMany(mappedBy = "categorias")
+    @JsonIgnore
     private List<Produto> produtos;
     
     public Categoria(Integer id, String nome, List<Produto> produtos) {

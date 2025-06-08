@@ -1,4 +1,4 @@
-package br.com.aula.faculdade.Core.Domain.model.CategoriaProduto;
+package br.com.aula.faculdade.Core.Domain.Model.CategoriaProduto;
 
 import java.io.Serializable;
 

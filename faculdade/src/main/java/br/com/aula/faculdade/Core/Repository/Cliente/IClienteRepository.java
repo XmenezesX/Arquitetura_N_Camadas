@@ -3,7 +3,8 @@ package br.com.aula.faculdade.Core.Repository.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.aula.faculdade.Core.Domain.model.Cliente.Cliente;
+import br.com.aula.faculdade.Core.Domain.Model.Cliente.Cliente;
+
 
 
 @Repository

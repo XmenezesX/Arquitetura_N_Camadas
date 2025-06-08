@@ -1,13 +1,13 @@
-package br.com.aula.faculdade.Core.Domain.model.Cliente;
+package br.com.aula.faculdade.Core.Domain.Model.Cliente;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import br.com.aula.faculdade.Core.Domain.model.Endereco.Endereco;
-import br.com.aula.faculdade.Core.Domain.model.Enuns.TipoDocumento.TipoDocumento;
-import br.com.aula.faculdade.Core.Domain.model.Pedido.Pedido;
+import br.com.aula.faculdade.Core.Domain.Model.Endereco.Endereco;
+import br.com.aula.faculdade.Core.Domain.Model.Enuns.TipoDocumento.TipoDocumento;
+import br.com.aula.faculdade.Core.Domain.Model.Pedido.Pedido;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;

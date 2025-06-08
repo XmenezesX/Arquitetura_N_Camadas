@@ -1,7 +1,7 @@
-package br.com.aula.faculdade.Core.Domain.model.Endereco;
+package br.com.aula.faculdade.Core.Domain.Model.Endereco;
 
-import br.com.aula.faculdade.Core.Domain.model.Cliente.Cliente;
-import br.com.aula.faculdade.Core.Domain.model.Endereco.Cidade.Cidade;
+import br.com.aula.faculdade.Core.Domain.Model.Cliente.Cliente;
+import br.com.aula.faculdade.Core.Domain.Model.Endereco.Cidade.Cidade;
 import jakarta.persistence.*;
 
 @Entity

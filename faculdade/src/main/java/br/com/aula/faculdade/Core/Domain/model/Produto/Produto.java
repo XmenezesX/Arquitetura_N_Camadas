@@ -1,10 +1,10 @@
-package br.com.aula.faculdade.Core.Domain.model.Produto;
+package br.com.aula.faculdade.Core.Domain.Model.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.aula.faculdade.Core.Domain.model.Categoria.Categoria;
-import br.com.aula.faculdade.Core.Domain.model.Pedido.ItemPedido;
+import br.com.aula.faculdade.Core.Domain.Model.Categoria.Categoria;
+import br.com.aula.faculdade.Core.Domain.Model.Pedido.ItemPedido;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

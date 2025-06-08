@@ -1,7 +1,7 @@
-package br.com.aula.faculdade.Core.Domain.model.CategoriaProduto;
+package br.com.aula.faculdade.Core.Domain.Model.CategoriaProduto;
 
-import br.com.aula.faculdade.Core.Domain.model.Categoria.Categoria;
-import br.com.aula.faculdade.Core.Domain.model.Produto.Produto;
+import br.com.aula.faculdade.Core.Domain.Model.Categoria.Categoria;
+import br.com.aula.faculdade.Core.Domain.Model.Produto.Produto;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

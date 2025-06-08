@@ -1,8 +1,8 @@
-package br.com.aula.faculdade.Core.Domain.model.Pagamento;
+package br.com.aula.faculdade.Core.Domain.Model.Pagamento;
 
 import java.sql.Date;
 
-import br.com.aula.faculdade.Core.Domain.model.Enuns.EstadoPagamento.EstadoPagamento;
+import br.com.aula.faculdade.Core.Domain.Model.Enuns.EstadoPagamento.EstadoPagamento;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 

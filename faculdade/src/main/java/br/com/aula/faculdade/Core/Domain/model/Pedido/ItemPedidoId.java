@@ -1,4 +1,4 @@
-package br.com.aula.faculdade.Core.Domain.model.Pedido;
+package br.com.aula.faculdade.Core.Domain.Model.Pedido;
 
 import java.io.Serializable;
 

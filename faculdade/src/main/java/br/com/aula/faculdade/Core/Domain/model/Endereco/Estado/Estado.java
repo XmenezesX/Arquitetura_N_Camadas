@@ -1,10 +1,12 @@
-package br.com.aula.faculdade.Core.Domain.model.Endereco.Estado;
+package br.com.aula.faculdade.Core.Domain.Model.Endereco.Estado;
 
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-import br.com.aula.faculdade.Core.Domain.model.Endereco.Cidade.Cidade;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import br.com.aula.faculdade.Core.Domain.Model.Endereco.Cidade.Cidade;
 
 @Entity
 @Table(name = "estado")
@@ -15,6 +17,7 @@ public class Estado {
     private String nome;
     
     @OneToMany(mappedBy = "estado")
+    @JsonIgnore
     private Set<Cidade> cidades = new HashSet<>();
     
     public Estado() {

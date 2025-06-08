@@ -1,6 +1,6 @@
-package br.com.aula.faculdade.Core.Domain.model.Pagamento;
+package br.com.aula.faculdade.Core.Domain.Model.Pagamento;
 
-import br.com.aula.faculdade.Core.Domain.model.Enuns.EstadoPagamento.EstadoPagamento;
+import br.com.aula.faculdade.Core.Domain.Model.Enuns.EstadoPagamento.EstadoPagamento;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

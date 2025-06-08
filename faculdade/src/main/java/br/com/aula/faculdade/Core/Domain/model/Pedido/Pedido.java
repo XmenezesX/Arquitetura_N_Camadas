@@ -1,13 +1,13 @@
-package br.com.aula.faculdade.Core.Domain.model.Pedido;
+package br.com.aula.faculdade.Core.Domain.Model.Pedido;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.aula.faculdade.Core.Domain.model.Cliente.Cliente;
-import br.com.aula.faculdade.Core.Domain.model.Endereco.Endereco;
-import br.com.aula.faculdade.Core.Domain.model.Pagamento.Pagamento;
-import br.com.aula.faculdade.Core.Domain.model.Produto.Produto;
+import br.com.aula.faculdade.Core.Domain.Model.Cliente.Cliente;
+import br.com.aula.faculdade.Core.Domain.Model.Endereco.Endereco;
+import br.com.aula.faculdade.Core.Domain.Model.Pagamento.Pagamento;
+import br.com.aula.faculdade.Core.Domain.Model.Produto.Produto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
