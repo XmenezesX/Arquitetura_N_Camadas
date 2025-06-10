@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import br.com.aula.faculdade.Core.Domain.Model.Endereco.Endereco;
 import br.com.aula.faculdade.Core.Domain.Model.Enuns.TipoDocumento.TipoDocumento;
 import br.com.aula.faculdade.Core.Domain.Model.Pedido.Pedido;
@@ -41,7 +43,9 @@ public class Cliente {
     
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pedido> pedidos = new ArrayList<>();
+    
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Endereco> enderecos = new ArrayList<>();
     
     public List<Endereco> getEnderecos() {
