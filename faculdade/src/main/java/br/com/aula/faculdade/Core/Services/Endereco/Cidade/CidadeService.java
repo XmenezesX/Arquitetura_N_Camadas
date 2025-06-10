@@ -5,16 +5,21 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import br.com.aula.faculdade.Api.DTOs.Cidade.CidadesPorEstadoResponse;
 import br.com.aula.faculdade.Core.Domain.Model.Endereco.Cidade.Cidade;
+import br.com.aula.faculdade.Core.Domain.Model.Endereco.Estado.Estado;
 import br.com.aula.faculdade.Core.Repository.Endereco.Cidade.ICidadeRepository;
+import br.com.aula.faculdade.Core.Repository.Endereco.Estado.IEstadoRepository;
 import br.com.aula.faculdade.Core.Services.BaseServico;
 
 @Service
 public class CidadeService implements BaseServico<Cidade>{
     private final ICidadeRepository cidadeRepository;
+    private final IEstadoRepository estadoRepository;
 
-    public CidadeService(ICidadeRepository cidadeRepository) {
+    public CidadeService(ICidadeRepository cidadeRepository, IEstadoRepository estadoRepository) {
         this.cidadeRepository = cidadeRepository;
+        this.estadoRepository = estadoRepository;
     }
 
     @Override
@@ -39,6 +44,16 @@ public class CidadeService implements BaseServico<Cidade>{
     @Override
     public List<Cidade> ObterTodasEntidades() {
         return cidadeRepository.findAll();
+    }
+
+    public CidadesPorEstadoResponse ObtemCidadePeloIdEstado(Integer id){
+        Optional<Estado> estado = estadoRepository.findById(id);
+        if (!estado.isEmpty()) {
+            List<Cidade> cidades = cidadeRepository.obtemCidadesPeloIdEstado(id);
+            CidadesPorEstadoResponse response = new CidadesPorEstadoResponse(cidades, estado.get());
+            return response;
+        }
+        return null;
     }
 
     

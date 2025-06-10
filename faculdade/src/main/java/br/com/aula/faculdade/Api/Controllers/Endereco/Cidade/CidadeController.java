@@ -3,10 +3,13 @@ package br.com.aula.faculdade.Api.Controllers.Endereco.Cidade;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.aula.faculdade.Api.Controllers.BaseController;
+import br.com.aula.faculdade.Api.DTOs.Cidade.CidadesPorEstadoResponse;
 import br.com.aula.faculdade.Core.Domain.Model.Endereco.Cidade.Cidade;
 import br.com.aula.faculdade.Core.Services.Endereco.Cidade.CidadeService;
 
@@ -46,5 +49,11 @@ public class CidadeController implements BaseController<Cidade> {
     @Override
     public List<Cidade> GetAllEntitys() {
         return service.ObterTodasEntidades();
+    }
+
+    @GetMapping("/estado/{id}")
+    public ResponseEntity<?> GetCityByEstateId(@PathVariable Integer id){
+        CidadesPorEstadoResponse response = service.ObtemCidadePeloIdEstado(id);
+        return ResponseEntity.ok(response);
     }
 }
